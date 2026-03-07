@@ -16,8 +16,8 @@ public class IntroSlideshow : MonoBehaviour
     {
         audioSource.volume = 0f;
         audioSource.Play();
-        StartCoroutine(FadeInAudio());
 
+        StartCoroutine(FadeInAudio());
         StartCoroutine(PlaySlideshow());
     }
 

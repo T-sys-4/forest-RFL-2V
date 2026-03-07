@@ -18,9 +18,9 @@ public class Coin : MonoBehaviour
         visual = GetComponentInChildren<SpriteRenderer>();
     }
 
-    private void CollectCoin() 
-    {
+    private void CollectCoin()     {
         circleCollider.enabled = false;
+
         visual.gameObject.SetActive(false);
         GameEventsManager.instance.goldEvents.GoldGained(goldGained);
         GameEventsManager.instance.miscEvents.CoinCollected();

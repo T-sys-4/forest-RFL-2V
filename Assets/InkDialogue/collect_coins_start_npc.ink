@@ -9,27 +9,27 @@
 }
 
 = requirementsNotMet
-// za to nalogo ni mogoče, ampak vseeno nekaj tukaj
-Vrni se, ko boš dosegel nekoliko višjo raven.
+// this quest cannot actually happen, but something is here anyway
+Come back when your experienced (I need level 2).
 -> END
 
 = canStart
-Ali boš zbral 5 kovancev in jih prinesel mojemu prijatelju tamle?
-* [Da]
+Will you collect 5 scraps for my bro over there? They are over at the other side on the right. 
+* [Yes]
     ~ StartQuest(CollectCoinsQuestId)
-    Super!
-* [Ne]
-    Oh, v redu potem. Vrni se, če si premisliš.
+    Great!
+* [No]
+    Oh, alright then. Come back if you want your hands dirty.
 - -> END
 
 = inProgress
-Kako napreduje zbiranje tistih kovancev?
+How is the scap collection going?
 -> END
 
 = canFinish
-O? Si zbral kovance? Pojdi jih dat mojemu prijatelju tamle in dal ti bo nagrado!
+Oh? Have you collected the scrap:>? Go give them to my friend over there and he will give you a big reward andddd...open the border for you too.
 -> END
 
 = finished
-Hvala, ker si zbral tiste kovance!
+Thank you for collecting those scraps :3!
 -> END
