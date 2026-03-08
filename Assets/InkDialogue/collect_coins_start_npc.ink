@@ -10,7 +10,7 @@
 
 = requirementsNotMet
 // this quest cannot actually happen, but something is here anyway
-Come back when your experienced (I need level 2).
+Come back when your experienced (I need level 3).
 -> END
 
 = canStart
