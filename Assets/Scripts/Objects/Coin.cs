@@ -6,7 +6,7 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     [Header("Config")]
-    [SerializeField] private float respawnTimeSeconds = 8;
+    //[SerializeField] private float respawnTimeSeconds = 8;
     [SerializeField] private int goldGained = 1;
 
     private CircleCollider2D circleCollider;
@@ -25,15 +25,15 @@ public class Coin : MonoBehaviour
         GameEventsManager.instance.goldEvents.GoldGained(goldGained);
         GameEventsManager.instance.miscEvents.CoinCollected();
         StopAllCoroutines();
-        StartCoroutine(RespawnAfterTime());
+        //StartCoroutine(RespawnAfterTime());
     }
 
-    private IEnumerator RespawnAfterTime()
-    {
-        yield return new WaitForSeconds(respawnTimeSeconds);
-        circleCollider.enabled = true;
-        visual.gameObject.SetActive(true);
-    }
+    //private IEnumerator RespawnAfterTime()
+    //{
+    //    yield return new WaitForSeconds(respawnTimeSeconds);
+    //    circleCollider.enabled = true;
+    //    visual.gameObject.SetActive(true);
+    //}
 
     private void OnTriggerEnter2D(Collider2D otherCollider) 
     {

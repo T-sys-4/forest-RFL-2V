@@ -10,11 +10,11 @@
 
 = requirementsNotMet
 // this quest cannot actually happen, but something is here anyway
-Come back when your experienced (I need level 3).
+Come back when your experienced by first collecting motherboards (I need level 5) 
 -> END
 
 = canStart
-Will you collect 5 scraps for my bro over there? They are over at the other side on the right. 
+Will you collect 20 metal scraps for my bro over there? They are on my right.
 * [Yes]
     ~ StartQuest(CollectCoinsQuestId)
     Great!

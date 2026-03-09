@@ -5,7 +5,7 @@ using UnityEngine;
 public class ExperienceGem : MonoBehaviour
 {
     [Header("Config")]
-    [SerializeField] private float respawnTimeSeconds = 8;
+    //[SerializeField] private float respawnTimeSeconds = 8;
     [SerializeField] private int experienceGained = 25;
 
     private CircleCollider2D circleCollider;
@@ -24,15 +24,15 @@ public class ExperienceGem : MonoBehaviour
         GameEventsManager.instance.playerEvents.ExperienceGained(experienceGained);
         GameEventsManager.instance.miscEvents.GemCollected();
         StopAllCoroutines();
-        StartCoroutine(RespawnAfterTime());
+        //StartCoroutine(RespawnAfterTime());
     }
 
-    private IEnumerator RespawnAfterTime()
-    {
-        yield return new WaitForSeconds(respawnTimeSeconds);
-        circleCollider.enabled = true;
-        visual.gameObject.SetActive(true);
-    }
+    //private IEnumerator RespawnAfterTime()
+    //{
+    //    yield return new WaitForSeconds(respawnTimeSeconds);
+    //    circleCollider.enabled = true;
+    //    visual.gameObject.SetActive(true);
+    //}
 
     private void OnTriggerEnter2D(Collider2D otherCollider) 
     {

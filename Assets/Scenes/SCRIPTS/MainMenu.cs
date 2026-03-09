@@ -9,8 +9,35 @@ using UnityEngine.Audio;
 public class MainMenu : MonoBehaviour
 {
 
-    
-    
+
+
+    public GameObject pauseMenu;   // drag pause panel here
+    bool isPaused = false;
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isPaused)
+                Resume();
+            else
+                Pause();
+        }
+    }
+
+    void Pause()
+    {
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+        isPaused = true;
+    }
+
+    public void Resume()
+    {
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
+        isPaused = false;
+    }
 
 
 

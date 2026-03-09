@@ -14,5 +14,5 @@ Hmm? What do you want?
     -> END
 * { CollectCoinsQuestState == "CAN_FINISH" } [Here are some scrap :3.]
     ~ FinishQuest(CollectCoinsQuestId)
-    Oh? This trash is for me? Thank you so much :3! I will also open the border for you since you helped me get some scrap that I was really hungry for.
+    Oh? This trash is for me? Thank you so much :3! I will also open the border for you and give you rewards. Go to any side of the map to continue your journey.
 -> END

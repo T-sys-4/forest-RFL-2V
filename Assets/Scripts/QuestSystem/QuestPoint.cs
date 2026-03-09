@@ -21,6 +21,26 @@ public class QuestPoint : MonoBehaviour
 
     private QuestIcon questIcon;
 
+    [SerializeField] private GameObject coinsParent;
+
+
+    private void Start()
+    {
+        if (coinsParent != null)
+        {
+            coinsParent.SetActive(false);
+        }
+    }
+
+    private void ActivateCoins()
+    {
+        if (coinsParent != null)
+        {
+            coinsParent.SetActive(true);
+        }
+    }
+
+
     private void Awake() 
     {
         questId = questInfoForPoint.id;
@@ -73,6 +93,11 @@ public class QuestPoint : MonoBehaviour
         {
             currentQuestState = quest.state;
             questIcon.SetState(currentQuestState, startPoint, finishPoint);
+
+            if (currentQuestState == QuestState.IN_PROGRESS)
+            {
+                ActivateCoins();
+            }
         }
     }
 
